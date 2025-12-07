@@ -1,0 +1,29 @@
+<!-- Filter / table -->
+  <section class="mb-3">
+    <div class="card card-radius p-3 shadow-sm">
+      <div class="d-flex gap-2 flex-wrap align-items-center mb-2">
+        <input id="tableSearch" class="form-control form-control-sm w-50" placeholder="Search transactions">
+        <select id="typeFilter" class="form-select form-select-sm w-auto">
+          <option value="all">All</option>
+          <option value="credit">Credit</option>
+          <option value="debit">Debit</option>
+        </select>
+        <div class="ms-auto d-flex gap-2">
+          <div class="btn-group">
+            <button class="btn btn-sm btn-outline-secondary" id="sortDate">Sort Date</button>
+            <button class="btn btn-sm btn-outline-secondary" id="sortAmount">Sort Amount</button>
+          </div>
+          <button class="btn btn-sm btn-outline-primary" id="exportCsv">Export</button>
+        </div>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table table-hover small" id="mainTable">
+          <thead class="table-light"><tr><th>Date</th><th>Details</th><th>Type</th><th class="text-end">Amount</th><th>Actions</th></tr></thead>
+          <tbody id="mainTbody"></tbody>
+        </table>
+      </div>
+
+      <nav><ul class="pagination pagination-sm" id="tablePagination"></ul></nav>
+    </div>
+  </section>

@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-contentarea',
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './contentarea.component.html',
   styleUrl: './contentarea.component.css'
 })
