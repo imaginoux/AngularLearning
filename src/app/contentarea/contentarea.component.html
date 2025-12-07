@@ -1,0 +1,203 @@
+<!-- contentarea.component.html -->
+<main class="p-4">
+
+  <!-- Breadcrumbs -->
+  <nav style="--bs-breadcrumb-divider:'>'" aria-label="breadcrumb">
+    <ol class="breadcrumb small mb-3">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Overview</li>
+    </ol>
+  </nav>
+
+  <!-- Page Title -->
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <div>
+      <h3 class="mb-0">Overview</h3>
+      <small class="text-muted">Quick glance of your accounts</small>
+    </div>
+    <div>
+      <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#newTxModal">New Transfer</button>
+    </div>
+  </div>
+
+  <!-- Section: Dashboard Cards -->
+  <section class="mb-4">
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="card card-radius p-3 shadow-sm">
+          <small class="text-muted">Balance</small>
+          <div class="h4 mt-1">₹ <span id="mainBalance">1,24,580.50</span></div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-radius p-3 shadow-sm">
+          <small class="text-muted">Credit Usage</small>
+          <div class="h4 mt-1">₹ 25,000</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-radius p-3 shadow-sm">
+          <small class="text-muted">Monthly Spend</small>
+          <div class="h4 mt-1">₹ 45,230</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter / table -->
+  <section class="mb-3">
+    <div class="card card-radius p-3 shadow-sm">
+      <div class="d-flex gap-2 flex-wrap align-items-center mb-2">
+        <input id="tableSearch" class="form-control form-control-sm w-50" placeholder="Search transactions">
+        <select id="typeFilter" class="form-select form-select-sm w-auto">
+          <option value="all">All</option>
+          <option value="credit">Credit</option>
+          <option value="debit">Debit</option>
+        </select>
+        <div class="ms-auto d-flex gap-2">
+          <div class="btn-group">
+            <button class="btn btn-sm btn-outline-secondary" id="sortDate">Sort Date</button>
+            <button class="btn btn-sm btn-outline-secondary" id="sortAmount">Sort Amount</button>
+          </div>
+          <button class="btn btn-sm btn-outline-primary" id="exportCsv">Export</button>
+        </div>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table table-hover small" id="mainTable">
+          <thead class="table-light"><tr><th>Date</th><th>Details</th><th>Type</th><th class="text-end">Amount</th><th>Actions</th></tr></thead>
+          <tbody id="mainTbody"></tbody>
+        </table>
+      </div>
+
+      <nav><ul class="pagination pagination-sm" id="tablePagination"></ul></nav>
+    </div>
+  </section>
+
+  <!-- Tabs / Carousel / Gallery -->
+  <section class="mb-4">
+    <div class="row g-3">
+      <div class="col-lg-6">
+        <div class="card card-radius p-3 shadow-sm">
+          <ul class="nav nav-tabs" id="exampleTabs" role="tablist">
+            <li class="nav-item" role="presentation"><button class="nav-link active" id="tab-1" data-bs-toggle="tab" data-bs-target="#pane1">Overview</button></li>
+            <li class="nav-item" role="presentation"><button class="nav-link" id="tab-2" data-bs-toggle="tab" data-bs-target="#pane2">Reports</button></li>
+          </ul>
+          <div class="tab-content p-3">
+            <div class="tab-pane fade show active" id="pane1">Quick insights and charts (placeholder)</div>
+            <div class="tab-pane fade" id="pane2">Monthly report and analytics (placeholder)</div>
+          </div>
+        </div>
+
+        <div class="card card-radius p-3 mt-3 shadow-sm">
+          <h6>Frequently Asked</h6>
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-target="#faq1" data-bs-toggle="collapse">How to transfer?</button></h2>
+              <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Use the transfer form to send money instantly.</div></div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-target="#faq2" data-bs-toggle="collapse">Charges?</button></h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Refer to tariff schedule for fees.</div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-lg-6">
+        <div id="mainCarousel" class="carousel slide card card-radius shadow-sm" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active"><img src="https://picsum.photos/seed/p1/900/300" class="d-block w-100" alt="slide"></div>
+            <div class="carousel-item"><img src="https://picsum.photos/seed/p2/900/300" class="d-block w-100" alt="slide"></div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+          <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+        </div>
+
+        <div class="card card-radius p-3 mt-3 shadow-sm">
+          <h6>Image Gallery</h6>
+          <div class="row g-2">
+            <div class="col-4"><img src="https://picsum.photos/seed/g1/300/200" class="img-fluid gallery-img rounded" data-bs-toggle="modal" data-bs-target="#imageModal"></div>
+            <div class="col-4"><img src="https://picsum.photos/seed/g2/300/200" class="img-fluid gallery-img rounded" data-bs-toggle="modal" data-bs-target="#imageModal"></div>
+            <div class="col-4"><img src="https://picsum.photos/seed/g3/300/200" class="img-fluid gallery-img rounded" data-bs-toggle="modal" data-bs-target="#imageModal"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Forms -->
+  <section class="mb-4">
+    <div class="card card-radius p-3 shadow-sm">
+      <h6>Transfer Form</h6>
+      <form id="fullForm" class="row g-2" novalidate>
+        <div class="col-md-6"><label class="form-label small">Email</label><input class="form-control" type="email" required><div class="invalid-feedback">Enter valid email</div></div>
+        <div class="col-md-6"><label class="form-label small">Password</label><input class="form-control" type="password" required minlength="6"><div class="invalid-feedback">Password too short</div></div>
+        <div class="col-md-4"><label class="form-label small">Amount</label><input class="form-control" type="number" min="1" step="0.01" required></div>
+        <div class="col-md-4"><label class="form-label small">Date</label><input class="form-control" type="date"></div>
+        <div class="col-md-4"><label class="form-label small">Time</label><input class="form-control" type="time"></div>
+        <div class="col-12"><label class="form-label small">Remarks</label><textarea class="form-control" rows="2"></textarea></div>
+        <div class="col-6"><label class="form-label small">Select</label><select class="form-select"><option>Option 1</option></select></div>
+        <div class="col-6 mt-2 d-flex align-items-center">
+          <div class="form-check me-3"><input class="form-check-input" type="checkbox" id="chk1"><label class="form-check-label small" for="chk1">Save beneficiary</label></div>
+          <div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="switch1"><label class="form-check-label small" for="switch1">Schedule</label></div>
+        </div>
+        <div class="col-12 d-flex gap-2">
+          <button class="btn btn-primary" type="submit">Submit</button>
+          <button class="btn btn-outline-secondary" type="reset">Reset</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Empty states -->
+  <section class="mb-4">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="card card-radius p-4 text-center shadow-sm">
+          <img src="https://picsum.photos/seed/empty/200/120" class="img-fluid mb-3" alt="empty">
+          <h5>No transactions yet</h5>
+          <p class="small text-muted">Start by making your first transfer.</p>
+          <button class="btn btn-sm btn-primary">Make a transfer</button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card card-radius p-4 text-center shadow-sm">
+          <h5>Error 404</h5>
+          <p class="small text-muted">Page not found.</p>
+          <a href="#" class="btn btn-sm btn-outline-primary">Go Home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Activity log -->
+  <section class="mb-4">
+    <div class="card card-radius p-3 shadow-sm">
+      <h6>Activity Log</h6>
+      <ul class="list-group small" id="activityLog">
+        <li style="padding:10px; list-style-type:none;">Activity 1</li>
+        <li style="padding:10px; list-style-type:none;">Activity 2</li>
+        <li style="padding:10px; list-style-type:none;">Activity 3</li>
+        <li style="padding:10px; list-style-type:none;">Activity 4</li>
+        <li style="padding:10px; list-style-type:none;">Activity 5</li>
+        <li style="padding:10px; list-style-type:none;">Activity 6</li>
+      </ul>
+    </div>
+  </section>
+
+
+  <!-- modals, toasts, ctx menu & spinner HTML needed by the global JS -->
+  <!-- New Transfer Modal -->
+  <div class="modal fade" id="newTxModal"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">New Transfer</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><form id="modalForm"><div class="mb-2"><input class="form-control" placeholder="To"></div><div class="mb-2"><input class="form-control" type="number" placeholder="Amount"></div><div class="text-end"><button class="btn btn-primary" type="submit">Send</button></div></form></div></div></div></div>
+
+  <div class="modal fade" id="imageModal"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-body p-0"><img src="" id="imageModalImg" class="img-fluid w-100"></div></div></div></div>
+
+  <div class="toast-container p-3" id="toastContainer"></div>
+  <div class="context-menu" id="ctxMenu"></div>
+  <div class="spinner-overlay" id="spinnerOverlay"><div class="spinner-border text-primary" role="status"></div></div>
+
+</main>

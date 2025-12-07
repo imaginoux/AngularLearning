@@ -1,0 +1,22 @@
+<!-- src/app/app.component.html -->
+<app-header></app-header>
+
+<div class="container-fluid">
+  <div class="row g-0">
+    <div class="col-lg-2 d-none d-lg-block">
+      <app-leftnav></app-leftnav>
+    </div>
+    
+    <div class="col-lg-2 d-none d-lg-block">
+      <app-rightnav></app-rightnav>
+    </div>
+    <div class="col-lg-8">
+      <app-contentarea></app-contentarea>
+    </div>
+
+    <!-- optional right panel placeholder - not created as a component now -->
+    <div class="col-lg-2 d-none d-lg-block"></div>
+  </div>
+</div>
+
+<app-footer></app-footer>

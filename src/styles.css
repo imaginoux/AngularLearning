@@ -1,0 +1,16 @@
+/* src/styles.css */
+ 
+/* custom theme + layout styles */
+:root{ --bg:#f8f9fa; --surface:#fff; --brand:#0d6efd; --muted:#6c757d; }
+[data-theme='dark']{ --bg:#0b1220; --surface:#0f1724; --brand:#3b82f6; --muted:#9aa4b2; color-scheme:dark }
+body{ background:var(--bg); }
+.sidebar{ min-width:240px; max-width:240px; background:var(--surface); border-right:1px solid #e9ecef; height:100vh; position:sticky; top:0; padding:1rem }
+.right-panel{ width:340px; background:var(--surface); border-left:1px solid #e9ecef; height:100vh; position:sticky; top:0; padding:1rem }
+.card-radius{ border-radius: .75rem }
+.gallery-img{ height:140px; object-fit:cover }
+.context-menu{ position:fixed; z-index:1055; display:none; background:#fff; box-shadow:0 6px 18px rgba(0,0,0,.12); border-radius:.5rem; overflow:hidden }
+.toast-container{ position:fixed; right:1rem; bottom:1rem; z-index:1080 }
+.spinner-overlay{ position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,.2); z-index:1090 }
+
+/* small fix for tables & lists */
+.small .nav, .small .list-group { font-size: .85rem; }

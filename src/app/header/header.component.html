@@ -1,0 +1,76 @@
+<!-- header.component.html -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="#"> <i class="bi bi-bank2-fill me-2" style="color:var(--brand)"></i> Acme Bank UI</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Overview</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Accounts</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Savings</a></li>
+            <li><a class="dropdown-item" href="#">Current</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Open New Account</a></li>
+          </ul>
+        </li>
+
+        <!-- Mega Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
+          <div class="dropdown-menu p-4" style="min-width:720px">
+            <div class="row">
+              <div class="col-4">
+                <h6>Payments</h6>
+                <ul class="list-unstyled small">
+                  <li><a class="text-decoration-none" href="#">UPI</a></li>
+                  <li><a class="text-decoration-none" href="#">NEFT/RTGS</a></li>
+                  <li><a class="text-decoration-none" href="#">Cards</a></li>
+                </ul>
+              </div>
+              <div class="col-4">
+                <h6>Loans</h6>
+                <ul class="list-unstyled small">
+                  <li><a class="text-decoration-none" href="#">Home Loan</a></li>
+                  <li><a class="text-decoration-none" href="#">Personal Loan</a></li>
+                </ul>
+              </div>
+              <div class="col-4">
+                <h6>Support</h6>
+                <p class="small text-muted">24/7 Customer support and chat</p>
+                <button class="btn btn-sm btn-outline-primary">Contact us</button>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <form class="d-flex me-3" role="search" onsubmit="return false;">
+        <input id="topSearch" class="form-control form-control-sm" placeholder="Search..." />
+      </form>
+
+      <div class="d-flex align-items-center gap-2">
+        <select id="langSelect" class="form-select form-select-sm w-auto">
+          <option value="en">English</option>
+          <option value="hi">हिंदी</option>
+        </select>
+        <button id="themeToggle" class="btn btn-sm btn-outline-secondary" title="Toggle theme"><i class="bi bi-sun-fill"></i></button>
+        <div class="dropdown">
+          <a class="d-flex align-items-center text-decoration-none dropdown-toggle" href="#" data-bs-toggle="dropdown">
+            <img src="https://ui-avatars.com/api/?name=A+K&background=0D6EFD&color=fff" class="rounded-circle me-2" width="36"/>
+            <span class="small">Amit</span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#" id="logoutBtn">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
