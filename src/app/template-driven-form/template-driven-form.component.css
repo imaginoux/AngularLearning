@@ -1,0 +1,31 @@
+/* Minimal, readable styling for form */
+.field {
+  margin-bottom: 12px;
+  width: 50%;
+  margin: 0 auto;
+}
+label {
+  display: block;
+  margin-bottom: 4px;
+}
+input, textarea {
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+  
+}
+.error small {
+  color: #b00020;
+  display: block;
+}
+button {
+  padding: 8px 12px;
+}
+.result {
+  margin-top: 16px;
+  background: #f7f7f7;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+  button { background-color: green; color: #f7f7f7; width:320px; margin: 0 auto; border: none;}

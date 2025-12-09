@@ -3,19 +3,19 @@
   <div class="mb-3">
     <h6 class="text-uppercase small text-muted">Main</h6>
     <nav class="nav flex-column">
-      <a class="nav-link active" href="#">Dashboard</a>
-      <a class="nav-link active" href="#">Accounts</a>
-      <a class="nav-link" href="#transactions">Transactions</a>
-      <a class="nav-link" [routerLink]="['card']"  >Cards</a>
-      <a class="nav-link" [routerLink]="['overview']"  >Overview</a>
+      <a class="nav-link" [routerLink]="['dasboard']">Dashboard</a>
+      <a class="nav-link" [routerLink]="['account']">Account</a>
+      <a class="nav-link" [routerLink]="['card']">Cards</a>
+      <a class="nav-link" [routerLink]="['overview']">Overview</a>
+      <a class="nav-link" [routerLink]="['transactions']">Transactions</a>
     </nav>
   </div>
   <hr/>
   <div>
-    <h6 class="small text-muted">Tools</h6>
+    <h6 class="small text-muted">Forms</h6>
     <nav class="nav flex-column small">
-      <a class="nav-link" href="#">Calculator</a>
-      <a class="nav-link" href="#">Support</a>
+      <a class="nav-link" [routerLink]="['templateform']">Template Driven Form</a>
+      <a class="nav-link" [routerLink]="['reactiveform']">Reactive Forms</a>
     </nav>
   </div>
 </aside>

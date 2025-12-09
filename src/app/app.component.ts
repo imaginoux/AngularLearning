@@ -3,14 +3,22 @@ import { HeaderComponent } from "./header/header.component";
 import { ContentareaComponent } from './contentarea/contentarea.component';
 import { FooterComponent } from "./footer/footer.component";
 import { LeftnavComponent } from "./leftnav/leftnav.component";
-import { RightnavComponent } from './rightnav/rightnav.component';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { FormsModule, NgForm } from '@angular/forms';
+import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-root',
+  standalone:true,
   imports: [
     RouterModule,
-    HeaderComponent, ContentareaComponent, FooterComponent, LeftnavComponent, RightnavComponent],
+    HeaderComponent, 
+    CommonModule, 
+    FormsModule,
+    FooterComponent, 
+    LeftnavComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

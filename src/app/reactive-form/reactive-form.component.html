@@ -1,0 +1,69 @@
+
+<h4>Reactive-form works!</h4>
+<!-- Reactive form example -->
+<form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+  <!-- Name -->
+  <div class="field">
+    <label for="name"><b>Name *</b></label>
+    <input class="card" id="name" type="text" formControlName="name" />
+    <div class="error" *ngIf="name?.invalid && (name?.touched || name?.dirty)">
+      <small *ngIf="name?.errors?.['required']">Name is required.</small>
+      <small *ngIf="name?.errors?.['minlength']">Minimum 3 characters required.</small>
+    </div>
+  </div>
+
+  <!-- Email -->
+  <div class="field">
+    <label for="email"><b>Email *</b></label>
+    <input class="card" id="email" type="email" formControlName="email" />
+    <div class="error" *ngIf="email?.invalid && (email?.touched || email?.dirty)">
+      <small *ngIf="email?.errors?.['required']">Email is required.</small>
+      <small *ngIf="email?.errors?.['email']">Enter a valid email address.</small>
+    </div>
+  </div>
+
+  <!-- Age -->
+  <div class="field">
+    <label for="age"><b>Age</b></label>
+    <input class="card" id="age" type="number" formControlName="age" />
+    <div class="error" *ngIf="age?.invalid && (age?.touched || age?.dirty)">
+      <small *ngIf="age?.errors?.['min']">Age must be 0 or higher.</small>
+    </div>
+  </div>
+
+  <!-- Gender -->
+  <div class="field">
+    <label><b>Gender</b></label>
+    <label><input  type="radio" formControlName="gender" value="male" /> Male</label>
+    <label><input  type="radio" formControlName="gender" value="female" /> Female</label>
+    <label><input  type="radio" formControlName="gender" value="other" /> Other</label>
+  </div>
+
+  <!-- Message -->
+  <div class="field">
+    <label for="message"><b>Message *</b></label>
+    <textarea class="card" id="message" formControlName="message"></textarea>
+    <div class="error" *ngIf="message?.invalid && (message?.touched || message?.dirty)">
+      <small *ngIf="message?.errors?.['required']">Message is required.</small>
+      <small *ngIf="message?.errors?.['minlength']">Message must be at least 10 characters.</small>
+    </div>
+  </div>
+
+  <!-- Agree -->
+  <div class="field">
+    <label><input class="card" type="checkbox" formControlName="agree" /> <b>I agree *</b></label>
+    <div class="error" *ngIf="agree?.invalid && (agree?.touched || agree?.dirty)">
+      <small *ngIf="agree?.errors?.['required'] || agree?.errors?.['requiredTrue']">You must agree before submitting.</small>
+    </div>
+    
+    <button type="submit">Submit</button>
+  </div>
+
+  
+</form>
+
+<!-- Display submitted data -->
+<div class="result" *ngIf="submittedData">
+  <h3>Submitted data</h3>
+  <pre>{{ submittedData | json }}</pre>
+</div>

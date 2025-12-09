@@ -1,0 +1,70 @@
+<h4>Template-driven-form</h4>
+<!-- Template-driven contact form example -->
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+  <!-- Name -->
+  <div class="field ">
+    <label for="name" ><b>Name *</b></label>
+    <input class="card" id="name" name="name" required minlength="3" [(ngModel)]="name" #nameCtrl="ngModel" />
+    <div class="error" *ngIf="nameCtrl.invalid && (nameCtrl.touched || nameCtrl.dirty)">
+      <small *ngIf="nameCtrl.errors?.['required']">Name is required.</small>
+      <small *ngIf="nameCtrl.errors?.['minlength']">Name must be at least 3 characters.</small>
+    </div>
+  </div>
+
+  <!-- Email -->
+  <div class="field">
+    <label for="email"><b>Email *</b></label>
+    <input class="card" id="email" name="email" required email [(ngModel)]="email" #emailCtrl="ngModel" />
+    <div class="error" *ngIf="emailCtrl.invalid && (emailCtrl.touched || emailCtrl.dirty)">
+      <small *ngIf="emailCtrl.errors?.['required']">Email is required.</small>
+      <small *ngIf="emailCtrl.errors?.['email']">Enter a valid email address.</small>
+    </div>
+  </div>
+
+  <!-- Age -->
+  <div class="field">
+    <label for="age"><b>Age</b></label>
+    <input class="card" id="age" name="age" type="number" min="0" [(ngModel)]="age" #ageCtrl="ngModel" />
+    <div class="error" *ngIf="ageCtrl.invalid && (ageCtrl.touched || ageCtrl.dirty)">
+      <small *ngIf="ageCtrl.errors?.['min']">Age cannot be negative.</small>
+    </div>
+  </div>
+
+  <!-- Gender (radio) -->
+  <div class="field">
+    <label><b>Gender</b></label>
+    <input type="radio" name="gender" value="male" [(ngModel)]="gender" /><label>Male</label>
+    <input type="radio" name="gender" value="female" [(ngModel)]="gender" /><label>Female</label>
+    <input type="radio" name="gender" value="other" [(ngModel)]="gender" /><label>Other</label>
+  </div>
+
+  <!-- Message -->
+  <div class="field">
+    <label for="message"><b>Message *</b></label>
+    <textarea class="card" id="message" name="message" required minlength="10" [(ngModel)]="message" #msgCtrl="ngModel"></textarea>
+    <div class="error" *ngIf="msgCtrl.invalid && (msgCtrl.touched || msgCtrl.dirty)">
+      <small *ngIf="msgCtrl.errors?.['required']">Message is required.</small>
+      <small *ngIf="msgCtrl.errors?.['minlength']">Message must be at least 10 characters.</small>
+    </div>
+  </div>
+
+  <!-- Agree checkbox -->
+  <div class="field">
+    <label><b>I agree *</b> <input type="checkbox" name="agree" required [(ngModel)]="agree" #agreeCtrl="ngModel" /> </label>
+    <div class="error" *ngIf="agreeCtrl.invalid && (agreeCtrl.touched || agreeCtrl.dirty)">
+      <small *ngIf="agreeCtrl.errors?.['required']">You must agree before submitting.</small>
+    </div>
+    <div> <button type="submit">Submit</button></div>
+  </div>
+
+  
+
+  <!-- Submit -->
+  
+</form>
+
+<!-- Show submitted data -->
+<div class="result" *ngIf="submittedData">
+  <h3>Submitted data</h3>
+  <pre>{{ submittedData | json }}</pre>
+</div>

@@ -3,7 +3,7 @@ import { RouterLink, RouterModule } from "@angular/router";
 
 @Component({
   selector: 'app-leftnav',
-  imports: [ RouterModule],
+  imports: [ RouterLink,RouterModule],
   templateUrl: './leftnav.component.html',
   styleUrl: './leftnav.component.css'
 })
