@@ -7,6 +7,10 @@ import { AccountComponent } from './account/account.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { TestTemplatedrivenFromComponent } from './test-templatedriven-from/test-templatedriven-from.component';
+import { TemplateDrivenFormTest01Component } from './template-driven-form-test-01/template-driven-form-test-01.component';
+import { PipeCaseDemoComponent } from './title-case-pipe-demo/title-case-pipe-demo.component';
+
 export const routes: Routes = [
 
     { path: '', component:ContentareaComponent,
@@ -18,7 +22,10 @@ export const routes: Routes = [
              {path: 'account', component: AccountComponent},
              {path: 'dasboard', component: DashboardComponent},
              {path: 'templateform',component: TemplateDrivenFormComponent},
-             {path: 'reactiveform', component: ReactiveFormComponent}
+             {path: 'reactiveform', component: ReactiveFormComponent},
+              {path: 'templatedrivenformpractice', component: TestTemplatedrivenFromComponent},
+              {path: 'templatedrivenformpracticetest', component: TemplateDrivenFormTest01Component},
+              {path: 'titlecasepipedemo', component: PipeCaseDemoComponent}
         ]
 
 

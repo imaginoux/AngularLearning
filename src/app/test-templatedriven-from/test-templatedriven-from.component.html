@@ -1,0 +1,22 @@
+<H4>Test-templatedriven-from works!</H4>
+<div class="form_wrapper">
+<form #f="ngForm" (ngSubmit)="onSubmit(f)"  >
+    <div class="field">
+        <label for="name">Name : </label>
+        <input type="text" id="name" name="name"  [(ngModel)]="userdata.name" required>
+         
+    </div>
+
+        <div class="field">
+        <label for="email">Email : </label>
+        <input type="text" id="email" name="email"  [(ngModel)]="userdata.email" required  >
+         
+        <p>
+    <!-- {{f.form.value|json}} -->
+ </p>
+ <button type="submit" [disabled]="!f.form.valid" >Save</button>
+    </div>
+
+ 
+</form>
+</div>

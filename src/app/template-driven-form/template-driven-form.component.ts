@@ -21,6 +21,7 @@ export class TemplateDrivenFormComponent {
 
   // called when the form is submitted
   onSubmit(form: NgForm) {
+    debugger;
     // mark all controls as touched so validation messages appear if invalid
     form.form.markAllAsTouched();
 

@@ -1,0 +1,29 @@
+<h4>Template-driven-form-test-01 works!</h4>
+
+
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+
+   <div class="field">
+<label for="first_name">Name: </label>
+<input type="text" id="first_name" name="first_name" [(ngModel)]="userdata.first_name" required>
+</div>
+   
+    <br>
+       <div class="field">
+<label for="emailID">Email: </label>
+<input type="text" id="emailID" name="emailID" [(ngModel)]="userdata.emailID" required>
+
+    </div>
+<br>
+    <div class="field">
+        <label for="address">address:</label>
+        <input type="text" id="address" name="address" [(ngModel)]="userdata.address" required>
+
+        <br>
+    <p>{{f.value|json}}</p>
+    <button type="submit" [disabled]="!f.form.valid">Save</button>
+    </div>
+    
+</form>
+
+<br>

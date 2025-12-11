@@ -11,7 +11,6 @@ import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angula
 
 @Component({
   selector: 'app-root',
-  standalone:true,
   imports: [
     RouterModule,
     HeaderComponent, 
