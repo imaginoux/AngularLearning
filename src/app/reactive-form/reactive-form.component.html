@@ -6,10 +6,13 @@
   <div class="field">
     <label for="name"><b>Name *</b></label>
     <input class="card" id="name" type="text" formControlName="name" />
-    <div class="error" *ngIf="name?.invalid && (name?.touched || name?.dirty)">
+    @if(name?.invalid && (name?.touched || name?.dirty)){
+      <div class="error">
       <small *ngIf="name?.errors?.['required']">Name is required.</small>
       <small *ngIf="name?.errors?.['minlength']">Minimum 3 characters required.</small>
     </div>
+    }
+    
   </div>
 
   <!-- Email -->
@@ -19,6 +22,15 @@
     <div class="error" *ngIf="email?.invalid && (email?.touched || email?.dirty)">
       <small *ngIf="email?.errors?.['required']">Email is required.</small>
       <small *ngIf="email?.errors?.['email']">Enter a valid email address.</small>
+    </div>
+  </div>
+
+
+   <div class="field">
+    <label for="rDate"><b>Registration Date *</b></label>
+    <input class="card" id="rDate" type="text" formControlName="rDate" />
+    <div class="error" *ngIf="rDate?.invalid && (rDate?.touched || rDate?.dirty)">
+      <small *ngIf="rDate?.errors?.['required']">Registration Date is required.</small>      
     </div>
   </div>
 
