@@ -29,7 +29,7 @@ export const routes: Routes = [
               {path: 'templatedrivenformpractice', component: TestTemplatedrivenFromComponent},
               {path: 'templatedrivenformpracticetest', component: TemplateDrivenFormTest01Component},
               {path: 'titlecasepipedemo', component: PipeCaseDemoComponent},
-              {path: 'login', component: LoginComponent}
+          
         ]
 
 
