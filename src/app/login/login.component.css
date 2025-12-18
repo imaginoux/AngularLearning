@@ -1,5 +1,6 @@
 /* Page background */
 .login-container {
+   background: #00B3DC;
   min-height: 100vh;
   background: linear-gradient(135deg, #fff,);
   display: flex;
@@ -13,7 +14,7 @@
   background: #ffffff;
   padding: 32px;
   width: 100%;
-  max-width: 380px;
+  max-width: 850px;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
@@ -79,7 +80,7 @@
   padding: 12px;
   border-radius: 8px;
   border: none;
-  background-color: #4f46e5;
+  background-color: #FF9900;
   color: white;
   font-size: 15px;
   cursor: pointer;
@@ -87,7 +88,33 @@
 }
 
 .login-btn:hover {
-  background-color: #4338ca;
+  background-color: #fcc46f;
+}
+
+.credential_details{
+  width: 45%;
+}
+
+.logo-wrapper {
+  text-align: center;
+  margin-bottom: 24px;
+  
+}
+
+.logo {
+  background-image: url('/Check_Box_logo.png ' );
+   background-repeat: no-repeat;
+  width: 400px;
+  height: 80px;
+  display: inline-block;
+}
+.login_img{
+    width: 45%;
+     background-image: url('/login-img.png');
+      background-repeat: no-repeat;
+  display: inline-block;
+  margin: 40px 0 0 40px;
+  
 }
 
 /* Footer */

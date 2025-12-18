@@ -7,20 +7,21 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { PopupFormComponent } from './popup/popup.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 @Component({
   selector: 'app-root',
+  standalone:true,
   imports: [
     RouterModule,
-    HeaderComponent, 
-    CommonModule, 
-    FormsModule,
-    FooterComponent, 
-    LeftnavComponent],
+    CommonModule,
+    FormsModule
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'demo';
+  title = 'demo' ;
 }

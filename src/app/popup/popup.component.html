@@ -1,0 +1,29 @@
+<h4>Send Email</h4>
+<h6>Please click below button for Open your Popup Form!</h6>
+<button (click)="openPopup()">Popup</button>
+
+
+<!-- Popup Overlay -->
+<div class="overlay field" *ngIf="showPopup">
+  <div class="popup">
+    <h3>Contact Form</h3>
+
+    <form (ngSubmit)="submitForm()">
+      <label>
+        Name:
+        
+        <input type="text" [(ngModel)]="formData.name" name="name" required>
+      </label>
+
+      <label>
+        Email:
+        <input type="email" [(ngModel)]="formData.email" name="email" required>
+      </label>
+
+      <div class="actions">
+        <button type="submit">Submit</button>
+        <button type="button" (click)="closePopup()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -11,6 +11,7 @@ import { TestTemplatedrivenFromComponent } from './test-templatedriven-from/test
 import { TemplateDrivenFormTest01Component } from './template-driven-form-test-01/template-driven-form-test-01.component';
 import { PipeCaseDemoComponent } from './title-case-pipe-demo/title-case-pipe-demo.component';
 import { LoginComponent } from './login/login.component';
+import { PopupFormComponent } from './popup/popup.component';
 
 export const routes: Routes = [
 
@@ -29,6 +30,7 @@ export const routes: Routes = [
               {path: 'templatedrivenformpractice', component: TestTemplatedrivenFromComponent},
               {path: 'templatedrivenformpracticetest', component: TemplateDrivenFormTest01Component},
               {path: 'titlecasepipedemo', component: PipeCaseDemoComponent},
+              {path: 'popup', component:PopupFormComponent}
           
         ]
 

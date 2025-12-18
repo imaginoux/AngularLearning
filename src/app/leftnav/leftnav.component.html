@@ -1,26 +1,23 @@
 <!-- leftnav.component.html -->
 <aside class="sidebar">
   <div class="mb-3">
-    <h6 class="text-uppercase small text-muted">Main</h6>
-    <nav class="nav flex-column">
-      <a class="nav-link" [routerLink]="['dasboard']">Dashboard</a>
-      <a class="nav-link" [routerLink]="['account']">Account</a>
-      <a class="nav-link" [routerLink]="['card']">Cards</a>
-      <a class="nav-link" [routerLink]="['overview']">Overview</a>
-      <a class="nav-link" [routerLink]="['transactions']">Transactions</a>
-      
-      
-    </nav>
+    <h6 class="menu_txt">MENU</h6>
+    <a class="no-underline nav-link" [routerLink]="['dasboard']"><div class="text-uppercase small text-muted menu_option">Master</div></a>
+   <a class="no-underline nav-link" [routerLink]="['account']"><div class="text-uppercase small text-muted menu_option ">User Management</div></a> 
+    <a class="no-underline nav-link" [routerLink]="['card']"><div class="text-uppercase small text-muted menu_option">Home</div></a>
+      <!-- <a >Dashboard</a> -->
   </div>
-  <hr/>
+
   <div>
-    <h6 class="small text-muted">Forms</h6>
     <nav class="nav flex-column small">
-      <a class="nav-link" [routerLink]="['templateform']">Template Driven Form</a>
-      <a class="nav-link" [routerLink]="['reactiveform']">Reactive Forms</a>
-      <a class="nav-link" [routerLink]="['templatedrivenformpractice']">Template Driven Form Practice 01</a>
-      <a class="nav-link" [routerLink]="['templatedrivenformpracticetest']">Template Driven Form Practice 02</a>
-      <a class="nav-link" [routerLink]="['titlecasepipedemo']">Title Case Pipe Demo</a>
+      <a class="nav-link sub_menu" [routerLink]="['templateform']">Template Driven Form</a>
+      <a class="nav-link sub_menu" [routerLink]="['reactiveform']">Reactive Form</a>
+      <a class="nav-link sub_menu" [routerLink]="['templatedrivenformpractice']">Practice 01</a>
+      <a class="nav-link sub_menu" [routerLink]="['templatedrivenformpracticetest']">Practice 02</a>
+      <a class="nav-link sub_menu" [routerLink]="['titlecasepipedemo']">Title Case Pipe Demo</a>
+      <a class="nav-link sub_menu" [routerLink]="['popup']">Send Email</a>
     </nav>
   </div>
+   <a class="no-underline nav-link" [routerLink]="['overview']"><div class="text-uppercase small text-muted menu_option">Overview</div></a>
+      <a class="no-underline nav-link" [routerLink]="['transactions']"><div class="text-uppercase small text-muted menu_option">Transactions</div></a>
 </aside>
