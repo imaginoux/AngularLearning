@@ -12,30 +12,27 @@ import { TemplateDrivenFormTest01Component } from './template-driven-form-test-0
 import { PipeCaseDemoComponent } from './title-case-pipe-demo/title-case-pipe-demo.component';
 import { LoginComponent } from './login/login.component';
 import { PopupFormComponent } from './popup/popup.component';
+import { TeamDashboardComponent } from './team-dashboard/team-dashboard.component';
 
 export const routes: Routes = [
 
-     
     { path: 'login', component: LoginComponent },
     {
     path:'', component: ContentareaComponent,
         children: [
+            {path: 'dashboard', component: DashboardComponent},
             {path:'card', component: CardComponent},
             {path:'overview', component: OverviewComponent},
              {path:'transactions', component: TransactionsComponent},
              {path: 'account', component: AccountComponent},
-             {path: 'dasboard', component: DashboardComponent},
              {path: 'templateform',component: TemplateDrivenFormComponent},
              {path: 'reactiveform', component: ReactiveFormComponent},
               {path: 'templatedrivenformpractice', component: TestTemplatedrivenFromComponent},
               {path: 'templatedrivenformpracticetest', component: TemplateDrivenFormTest01Component},
               {path: 'titlecasepipedemo', component: PipeCaseDemoComponent},
-              {path: 'popup', component:PopupFormComponent}
-          
+              {path: 'popup', component:PopupFormComponent},      
+              {path: 'team-dashboard', component:TeamDashboardComponent}
         ]
-
-
-
     },
 
       { path: '**', redirectTo: 'login' }

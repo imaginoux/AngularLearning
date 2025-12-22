@@ -1,54 +1,67 @@
 <div class="login-container">
   <div class="login-card row">
-  
-    
-<div class="credential_details  col-md-6">
-  <div class="logo-wrapper logo ">
-</div> 
-    <form>
-      <!-- Email -->
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          placeholder="Enter your email"
-          required
-        />
-      </div>
 
-      <!-- Password -->
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          placeholder="Enter your password"
-          required
-        />
-      </div>
+    <div class="credential_details col-md-6">
+      <div class="logo-wrapper logo"></div>
 
-      <!-- Remember me -->
-      <div class="options">
-        <label>
-          <input type="checkbox" />
-          Remember me
-        </label>
-        <a href="#">Forgot password?</a>
-      </div>
+      <form (ngSubmit)="login()" #loginForm="ngForm">
 
-      <!-- Login Button -->
-      <button type="submit" class="login-btn">Login</button>
-    </form>
-    <p class="footer-text">
-      Don’t have an account?
-      <a href="#">Sign up</a>
-    </p>
-</div>
-<div class="login_img col-md-6">
- 
-</div>
-    <!-- Footer -->
-    
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+            [(ngModel)]="email"
+          />
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+            [(ngModel)]="password"
+          />
+        </div>
+
+        <!-- Remember me -->
+        <div class="options">
+          <label>
+            <input type="checkbox" />
+            Remember me
+          </label>
+          <a href="#">Forgot password?</a>
+        </div>
+
+        <!-- Login Button -->
+        <button
+          type="submit"
+          class="login-btn"
+          [disabled]="loginForm.invalid"
+        >
+          Login
+        </button>
+
+        <!-- Error -->
+        <!-- <p *ngIf="errorMessage" style="color:red">
+          {{ errorMessage }}
+        </p> -->
+      </form>
+
+      <p class="footer-text">
+        Don’t have an account?
+        <a href="#">Sign up</a>
+      </p>
+    </div>
+
+    <div class="login_img col-md-6"></div>
   </div>
 </div>
