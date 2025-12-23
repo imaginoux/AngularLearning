@@ -2,23 +2,24 @@
 <aside class="sidebar">
   <div class="mb-3">
     <h6 class="menu_txt">MENU</h6>
-    <a class="no-underline nav-link" [routerLink]="['']"><div class="text-uppercase small text-muted menu_option">Master</div></a>
-   <a class="no-underline nav-link" [routerLink]="['account']"><div class="text-uppercase small text-muted menu_option ">User Management</div></a> 
-    <a class="no-underline nav-link" [routerLink]="['card']"><div class="text-uppercase small text-muted menu_option">Home</div></a>
+    <a class="no-underline nav-link" [routerLink]="['']"><div class="text-uppercase small text-muted menu_option"><span class="mR10"><img src="/Master_icon.png"></span>Master</div></a>
+   <a class="no-underline nav-link" [routerLink]="['account']"><div class="text-uppercase small text-muted menu_option "><span class="mR10"><img src="/User_Management.png"></span>User Management</div></a> 
+    <a class="no-underline nav-link" [routerLink]="['card']"><div class="text-uppercase small text-muted menu_option"><span class="mR10"><img src="/Home.png"></span>Home</div></a>
   <!-- <a >Dashboard</a> -->
   </div>
 
   <div>
     <nav class="nav flex-column small">
-      <a class="nav-link sub_menu" [routerLink]="['team-dashboard']">Team Dashboard</a>
-        <a class="nav-link sub_menu" [routerLink]="['templateform']">Template Form </a>
-      <a class="nav-link sub_menu" [routerLink]="['reactiveform']">Reactive Form</a>
-      <a class="nav-link sub_menu" [routerLink]="['templatedrivenformpractice']">Practice 01</a>
-      <a class="nav-link sub_menu" [routerLink]="['templatedrivenformpracticetest']">Practice 02</a>
-      <a class="nav-link sub_menu" [routerLink]="['titlecasepipedemo']">Title Case Pipe Demo</a>
-      <a class="nav-link sub_menu" [routerLink]="['popup']">Send Email</a>
+      <div class="bB"><a class="nav-link sub_menu" [routerLink]="['team-dashboard']"><span class="mR10"><img src="/Team_Dashboard.png"></span>Team Dashboard</a></div>
+       <div class="bB"> <a class="nav-link sub_menu" [routerLink]="['templateform']"><span class="mR10"><img src="/Monthly_Calendar.png"></span>Monthly Calendar </a></div>
+    <div class="bB">  <a class="nav-link sub_menu" [routerLink]="['reactiveform']"><span class="mR10"><img src="/Check List.png"></span>Check List</a></div>
+     <div class="bB"> <a class="nav-link sub_menu" [routerLink]="['templatedrivenformpractice']"><span class="mR10"><img src="/Completed_Task.png"></span>Completed Task</a></div>
+      <div class="bB"><a class="nav-link sub_menu" [routerLink]="['templatedrivenformpracticetest']"><span class="mR10"><img src="/Manage_Task.png"></span>Manage Task</a></div>
+    <div class="bB">  <a class="nav-link sub_menu" [routerLink]="['titlecasepipedemo']"><span class="mR10"><img src="/Register.png"></span>Register</a></div>
+     <div class="bB"> <a class="nav-link sub_menu" [routerLink]="['popup']"><span class="mR10"><img src="/Sent_Mail.png"></span>Send Email</a></div>
+      
     </nav>
   </div>
-  <a class="no-underline nav-link" [routerLink]="['overview']"><div class="text-uppercase small text-muted menu_option">Overview</div></a>
-      <a class="no-underline nav-link" [routerLink]="['transactions']"><div class="text-uppercase small text-muted menu_option">Transactions</div></a>
+  <!-- <a class="no-underline nav-link" [routerLink]="['overview']"><div class="text-uppercase small text-muted menu_option">Overview</div></a>
+      <a class="no-underline nav-link" [routerLink]="['transactions']"><div class="text-uppercase small text-muted menu_option">Transactions</div></a> -->
 </aside>

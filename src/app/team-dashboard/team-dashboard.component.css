@@ -37,16 +37,16 @@ h1 {
   display: grid;
   grid-template-columns: 2fr repeat(4, 1fr);
   gap: 16px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 16px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-  height: 175px;
-  width: 195px;
+      background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.20);
+    height: 170px;
+    width: 195px;
 }
 
 /* Profile */
@@ -54,18 +54,20 @@ h1 {
   display: flex;
   gap: 16px;
   align-items: center;
-  width: 365px;
+  width: 350px;
+  border: none;
 }
 
 .profile-card img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  margin-top: 18px;
 }
 
 .role {
   font-size: 14px;
-  color: #777;
+  color: #000;
 }
 
 .email {
@@ -75,12 +77,14 @@ h1 {
 
 .rating {
   color: orange;
-  font-size: 22px;
+  font-size: 25px;
+  
 }
 
 /* Metrics */
 .metric-card {
   text-align: center;
+  border: none;
 }
 
 .metric-card h2 {
@@ -120,25 +124,34 @@ h1 {
 
 .bucket-actions select,
 .bucket-actions input {
-  padding: 8px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+      padding: 6px 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    font-weight: bold;
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.20);
+    border: none;
 }
 
 .add-btn {
-  background: orange;
-  color: #fff;
-  border: none;
-  padding: 10px 16px;
-  border-radius: 20px;
-  cursor: pointer;
+     background: orange;
+    color: #fff;
+    border: none;
+    padding: 7px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 13px;
 }
+
+.toggle{box-shadow: 0 0px 8px rgba(0, 0, 0, 0.20);padding: 7px 14px; border-radius: 6px; font-size: 12px; font-weight: bold;}
 
 /* Toggle */
 .switch {
   position: relative;
   width: 40px;
   height: 20px;
+  
 }
 
 .switch input {
@@ -188,12 +201,13 @@ h1 {
 .green_light { background: #e8ffd3; }
 
 .column-header {
-  padding: 12px;
-  border-radius: 10px 10px 0px 0px;
-  font-weight: bold;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
+padding: 10px 20px;
+    border-radius: 10px 10px 0px 0px;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
 }
 
 .blue_txt { color: #03a9f4; }
@@ -212,17 +226,25 @@ h1 {
   border-radius: 10px;
   padding: 12px;
   margin: 12px;
+  font-size: 15px;
+  line-height: normal;
 }
 
 .task-card h4 {
   margin: 0 0 6px;
 }
 
+.task_txt {font-size: 12px; font-family: Arial, Helvetica, sans-serif;line-height: normal; margin-bottom: 5px; }
+.sub_task_txt {font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: #707070; line-height: normal; margin: 5px 0px 5px 0px;}
+.rating_txt {font-size: 25px; font-family: Arial, Helvetica, sans-serif; color: #FF9900; line-height: normal; }
 .tag {
   font-size: 12px;
   color: #03a9f4;
+  font-weight: bold;
 }
 
+.active_project_txt{ font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #00a8e8; font-weight: bold; margin-bottom: 10px;}
+.total_project_txt { font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #333; font-weight: bold; margin-top: 15px;}
 .priority.high {
   color: red;
   font-weight: bold;

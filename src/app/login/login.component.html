@@ -1,14 +1,16 @@
 <div class="login-container">
   <div class="login-card row">
 
-    <div class="credential_details col-md-6">
+    <div class="credential_details col-md-6 ">
       <div class="logo-wrapper logo"></div>
+      <div class="app_heading">Task Assignment & Management</div>
+      <div class="app_sub_heading">Task Assignment & Management involves assigning, tracking, and managing tasks to boost productivity and achieve goals efficiently.</div>
 
       <form (ngSubmit)="login()" #loginForm="ngForm">
 
         <!-- Email -->
         <div class="form-group">
-          <label for="email">Email</label>
+          <label for="email">Email ID</label>
           <input
             type="email"
             id="email"
@@ -38,7 +40,7 @@
             <input type="checkbox" />
             Remember me
           </label>
-          <a href="#">Forgot password?</a>
+         <span class="sign_up_txt"> <a href="#">Forgot password?</a></span>
         </div>
 
         <!-- Login Button -->
@@ -47,7 +49,7 @@
           class="login-btn"
           [disabled]="loginForm.invalid"
         >
-          Login
+         <b> Login</b>
         </button>
 
         <!-- Error -->
@@ -56,12 +58,11 @@
         </p> -->
       </form>
 
-      <p class="footer-text">
+      <div class="footer-text">
         Don’t have an account?
-        <a href="#">Sign up</a>
-      </p>
+       <div class="sign_up_txt"> <a href="#" >Sign up</a></div>
+      </div>
     </div>
-
-    <div class="login_img col-md-6"></div>
+    <div class="login_img col-md-6  d-none d-md-block"></div>
   </div>
 </div>

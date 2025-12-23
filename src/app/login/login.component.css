@@ -14,7 +14,7 @@
   background: #ffffff;
   padding: 32px;
   width: 100%;
-  max-width: 850px;
+  max-width: 900px;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
@@ -43,12 +43,13 @@
 }
 
 .form-group input {
-  width: 100%;
-  padding: 10px 12px;
-  border-radius: 8px;
-  border: 1px solid #d1d5db;
-  font-size: 14px;
+     width: 100%;
+    padding: 6px 8px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    font-size: 12px;
 }
+
 
 .form-group input:focus {
   outline: none;
@@ -95,6 +96,23 @@
   width: 45%;
 }
 
+@media screen and (max-width: 375px) {
+.credential_details {
+    width:45%;
+}
+  
+.login_img{
+   
+    display: none;
+   
+}
+
+}
+
+  
+
+
+
 .logo-wrapper {
   text-align: center;
   margin-bottom: 24px;
@@ -105,17 +123,35 @@
   background-image: url('/Check_Box_logo.png ' );
    background-repeat: no-repeat;
   width: 400px;
-  height: 80px;
+  height: 60px;
   display: inline-block;
 }
 .login_img{
     width: 45%;
-     background-image: url('/login-img.png');
-      background-repeat: no-repeat;
-  display: inline-block;
-  margin: 40px 0 0 40px;
-  
+    background-image: url(/login-img.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin: 95px 0 0 57px;
 }
+  
+.app_heading {
+    font-family: montserrat;
+    color: #00B3DC;
+    font-size: 38px;
+    line-height: 1;
+    font-weight: bold;
+    margin-bottom: 15px;}
+
+.sign_up_txt { color: #00B3DC; font-family: Arial, Helvetica, sans-serif; font-weight: bold; text-decoration: none; list-style-type: none;}
+
+.app_sub_heading{font-family: Arial, Helvetica, sans-serif;
+    color: #646464;
+    font-size: 12px;
+    line-height: normal;
+    margin-bottom: 20px;}
+
+
+
 
 /* Footer */
 .footer-text {
