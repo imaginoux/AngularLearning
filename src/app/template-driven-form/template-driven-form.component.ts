@@ -3,15 +3,29 @@ import { CommonModule, TitleCasePipe } from '@angular/common';
 import { FormsModule, NgForm, NgModel } from '@angular/forms';
 import { User } from '../Models/User';
 import { TitleCaseSmartPipe } from '../title-case-smart.pipe';
+import { CBPopupComponent } from '../Library/popup/popup.component';
 
 @Component({
   selector: 'app-template-driven-form',
   standalone:true,
-  imports: [CommonModule, FormsModule, TitleCaseSmartPipe],
+  imports: [CommonModule, FormsModule, TitleCaseSmartPipe,CBPopupComponent],
   templateUrl: './template-driven-form.component.html',
   styleUrl: './template-driven-form.component.css'
 })
 export class TemplateDrivenFormComponent implements OnInit  {
+
+  Show(){
+    this.isShowPopup=true;
+  }
+  Close(){
+    alert("Close click");
+    this.isShowPopup=false;
+  }
+  isShowPopup=true;
+  OkClick($event: any){
+    alert($event);
+    this.isShowPopup=false;
+  }
   ngOnInit(): void {
     this.user= new User();
     this.user.email="@qdn.com";

@@ -1,6 +1,11 @@
 <h4>Template-driven-form</h4>
 <!-- Template-driven contact form example -->
  {{user.name | titleCaseSmart}}
+
+ 
+ <button type="button" (click)="Show()">Show</button>
+
+ <cb-popup *ngIf="isShowPopup" (OkEvent)="OkClick($event)"   (CancelEvent)="Close()" isOkShow=true isCancelSHow=true isHeader=false>Do you want to save Data? </cb-popup>
 <form #f="ngForm" (ngSubmit)="onSubmit(f,nameCtrl)" novalidate>
   <!-- Name -->
   <div class="field ">

@@ -1,0 +1,10 @@
+<div class="overlay field">
+  <div class="popup">
+    <h3 *ngIf="isHeader">{{header}}</h3>
+
+    <ng-content></ng-content>
+
+     <button *ngIf="isOkShow"  (click)="OkCLick()" type="button">Ok</button> 
+     <button *ngIf="isOkShow" (click)="CancelCLick()" type="button">Caccel</button>
+  </div>
+</div>

@@ -3,12 +3,10 @@
 <button (click)="openPopup()">Popup</button>
 
 
-<!-- Popup Overlay -->
-<div class="overlay field" *ngIf="showPopup">
-  <div class="popup">
-    <h3>Contact Form</h3>
+<cb-popup  header="Contact form" [isHeader]="isHeader"   *ngIf="showPopup">
 
-    <form (ngSubmit)="submitForm()">
+
+ <form (ngSubmit)="submitForm()">
       <label>
         Name:
         
@@ -24,6 +22,9 @@
         <button type="submit">Submit</button>
         <button type="button" (click)="closePopup()">Cancel</button>
       </div>
-    </form>
-  </div>
-</div>
+    </form> 
+
+
+</cb-popup>
+
+
