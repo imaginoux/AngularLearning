@@ -1,8 +1,8 @@
-<h4>Send Email</h4>
+<h4>Popup Test</h4>
 <h6>Please click below button for Open your Popup Form!</h6>
-<button (click)="openPopup()">Popup</button>
+<button (click)="openPopup()">Test Popup</button>
 
-<cb-popup  header="Contact form" [isHeader]="isHeader"   *ngIf="showPopup">
+<cb-popup  header="Test Form" [isHeader]="isHeader"   *ngIf="showPopup">
   
  <form (ngSubmit)="submitForm()">
       <label>
@@ -22,6 +22,5 @@
       </div>
     </form> 
 
+
 </cb-popup>
-
-

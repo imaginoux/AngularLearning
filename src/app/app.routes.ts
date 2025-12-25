@@ -13,6 +13,7 @@ import { PipeCaseDemoComponent } from './title-case-pipe-demo/title-case-pipe-de
 import { LoginComponent } from './login/login.component';
 import { PopupFormComponent } from './popup/popup.component';
 import { TeamDashboardComponent } from './team-dashboard/team-dashboard.component';
+import { PopupTestComponent } from './popup-test/popup-test.component';
 
 export const routes: Routes = [
 
@@ -31,7 +32,9 @@ export const routes: Routes = [
               {path: 'templatedrivenformpracticetest', component: TemplateDrivenFormTest01Component},
               {path: 'titlecasepipedemo', component: PipeCaseDemoComponent},
               {path: 'popup', component:PopupFormComponent},      
-              {path: 'team-dashboard', component:TeamDashboardComponent}
+              {path: 'team-dashboard', component:TeamDashboardComponent},
+              {path: 'popup-test', component: PopupTestComponent}
+              
         ]
     },
 

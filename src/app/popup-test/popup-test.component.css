@@ -1,0 +1,19 @@
+button { background-color: green; color: #f7f7f7; width:120px; margin: 0 auto; border: none; padding: 5px; border-radius: 3px;}
+
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 6px;
+  margin-top: 4px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
