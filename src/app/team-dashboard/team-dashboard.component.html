@@ -11,8 +11,12 @@
     [dashboardLabel]="dashboardText"
   </cb-page-heading>
 
+  <div class="kanban">
+  @for(item of data;track item.name){
 
-  <cb-task-section></cb-task-section>
+     <cb-task-section  [task]="item" ></cb-task-section>
+  }
+ </div>
 
 </div>
 
@@ -105,7 +109,7 @@
   <!-- <div class="kanban">
 
      TASK -->
-    <!-- <div class="column task blue_light">
+    <!-- <div class="column task task_light">
       <div class="column-header blue">Task <span>07</span></div>
 
       <div class="task-card">

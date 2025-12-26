@@ -102,9 +102,9 @@ h1 {
   color: #000;
 }
 
-.green { color: #ffffff; }
-.blue { color: #ffffff; }
-.red { color: #ffffff; }
+.completed { color: #ffffff; }
+.task { color: #ffffff; }
+.open { color: #ffffff; }
 
 /* .gauge {background-image: url('/speedometer.jpg');background-repeat: no-repeat; width:174px; height: 87px;} */
 
@@ -195,10 +195,10 @@ h1 {
  
 }
 
-.blue_light { background: #a8e6ff; }
-.orange_light { background: #ffe8c4; }
+.task_light { background: #a8e6ff; }
+.open_light { background: #ffe8c4; }
 .yellow_light { background: #feffc7; }
-.green_light { background: #e8ffd3; }
+.completed_light { background: #e8ffd3; }
 
 .column-header {
 padding: 10px 20px;
@@ -215,10 +215,9 @@ padding: 10px 20px;
 .red_txt { color: #DC292E; }
 .green_txt { color: #6bbf1d; }
 
-.blue { background: #03a9f4; }
-.orange { background: #f39c12; }
-.yellow { background: #d6c200; }
-.green { background: #6bbf1d; }
+.task { background: #03a9f4; }
+.open { background: #f39c12; }
+.completed { background: #6bbf1d; }
 
 /* Task Card */
 .task-card {

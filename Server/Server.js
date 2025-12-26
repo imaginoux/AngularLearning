@@ -63,6 +63,8 @@ app.post('/api/user', (req, res) => {
   res.json({ status: 'success', data: { name, age } });
 });
 
+//cors 
+
 
 app.get('/api/user/:userId', (req, res) => {
   const { userId } = req.params;
@@ -87,6 +89,34 @@ app.get('/api/user/:userId', (req, res) => {
 
  
 });
+
+
+
+app.get('/api/task/:userId', (req, res) => {
+  const { userId } = req.params;
+
+
+  const index=users.findIndex((x)=>x.id==userId);
+
+  if(index>-1){
+     res.json({
+    status: 'success',
+    data: users[index]
+  });
+  }else {
+      res.json({
+    status: 'Error',
+    message: "User noot found",
+    data: null
+  });
+  }
+  // Example: mock user data (normally from DB)
+   
+
+ 
+});
+
+
 
 
 // Start server

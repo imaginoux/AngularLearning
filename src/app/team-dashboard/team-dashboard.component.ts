@@ -17,11 +17,13 @@ export class TeamDashboardComponent {
   dashboardText = 'Team Dashboard';
 
 
-  data={
+  data=[
+    {
     name: "Task",
-    count: 7,
+    count: 4,
     list: [
       {
+        id: 1,
         task: "Send Appointment Lette",
         assignedUser: "Amit",
         taskDetail: "As a process we need to send an appointment letter to newly joined resource.",
@@ -30,8 +32,9 @@ export class TeamDashboardComponent {
         priority: "High"
       },
       {
+         id: 2,
         task: "Verification of Newly Joined Resource",
-        assignedUser: "Amit",
+        assignedUser: "Abhay",
         taskDetail: "Dashboard design for landing page for respective project.",
         assignedBy: "Amit Kawade",
         endDateTime: "31st Dec 2025",
@@ -39,13 +42,14 @@ export class TeamDashboardComponent {
       },
 
     ]
-  }
+  },
 
-  data={
+ {
     name: "Open",
-    count: 7,
+    count: 2,
     list: [
       {
+         id: 3,
         task: "Send Appointment Lette",
         assignedUser: "Amit",
         taskDetail: "As a process we need to send an appointment letter to newly joined resource.",
@@ -54,6 +58,7 @@ export class TeamDashboardComponent {
         priority: "High"
       },
       {
+        id: 4,
         task: "Perform Background Verification of Newly Joined Resource",
         assignedUser: "Amit",
         taskDetail: "Dashboard design for landing page for respective project.",
@@ -65,11 +70,12 @@ export class TeamDashboardComponent {
     ]
   }
 
-  data={
+  ,{
     name: "Completed",
-    count: 7,
+    count: 3,
     list: [
       {
+         id: 5,
         task: "Follow up with seniors for incremented salary details",
         assignedUser: "Amit",
         taskDetail: "Dashboard design for landing page for respective project.",
@@ -78,6 +84,7 @@ export class TeamDashboardComponent {
         Status: "Completed"
       },
       {
+        id: 6,
         task: "Newly Open Bank Account of Newly Joined Resource",
         assignedUser: "Amit",
         taskDetail: "Completed Document Process ",
@@ -87,6 +94,6 @@ export class TeamDashboardComponent {
       },
 
     ]
-  }
+  }]
 
 }

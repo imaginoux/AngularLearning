@@ -1,28 +1,29 @@
 <!-- TASK -->
-    <div class="column task blue_light">
-      <div class="column-header blue">Task <span>07</span></div>
+    <div class="column {{task.name }} {{task.name.toLowerCase()}}_light"
+    
+    [class.task_list]="task.name.toLowerCase()=='task'"
+    [class.open_list]="task.name.toLowerCase()=='open'"
+    [class.completed_list]="task.name.toLowerCase()=='complted'"
+    >
+      <div class="column-header {{task.name.toLowerCase()}}">{{task.name | uppercase }} <span>{{task.count}}</span></div>
 
+      @for(item of task?.list;track item.id){
       <div class="task-card">
-        <div class="task_txt">  <b>Send Appointment Letter</b></div>
-        <div class="tag">Individual</div>
-        <div class="sub_task_txt">As a process we need to send an appointment letter to newly joined resource.</div>
-        <div class="tag">Assigned By: Amit Kawade</div>
-        <div class="priority high">PRIORITY: HIGH</div>
+        <div class="task_txt"      
+        
+         [class.task_txt]="task.name.toLowerCase()=='task'"
+    [class.open_txt]="task.name.toLowerCase()=='open'"
+    [class.completed_txt]="task.name.toLowerCase()=='complted'"
+        
+        >  <b>{{item?.task}}</b></div>
+        <div class="tag">{{item?.assignedUser | showUserType:currentUser}}</div>
+        <div class="sub_task_txt">{{item?.taskDetail}}</div>
+        <div class="tag">Assigned By: {{item?.assignedBy}}</div>
+        <div class="priority high">PRIORITY: {{item?.priority  | uppercase}}</div>
       </div>
 
-      <div class="task-card">
-         <div class="task_txt"> <b>Verification of Newly Joined Resource</b></div>
-         <div class="tag">Individual</div>
-        <div class="sub_task_txt">Dashboard design for landing page for respective project.</div>
-        <div class="tag">Assigned By: Amit Kawade</div>
-        <div class="priority high">PRIORITY: HIGH</div>
-      </div>
 
-      <div class="task-card">
-       <div class="task_txt"> <b>Pending Invoice Follow Up</b></div>
-         <div class="tag">Individual</div>
-        <div class="sub_task_txt">Pending invoice follow up.</div>
-        <div class="tag">Assigned By: Amit Kawade</div>
-        <div class="priority high">PRIORITY: HIGH</div>
-      </div>
+    }
+
+      
     </div>
