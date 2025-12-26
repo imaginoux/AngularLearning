@@ -1,0 +1,18 @@
+/* Breadcrumb */
+.breadcrumb {
+  font-size: 14px;
+  
+}
+
+.breadcrumb a {
+  color: #00a8e8;
+  text-decoration: none;
+  
+}
+.p_breadcrum {padding: 20px !important;}
+
+.p10{padding: 0px 10px 0px 10px;}
+
+h1 {
+  margin-bottom: 20px;
+}

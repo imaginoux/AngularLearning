@@ -1,1 +1,18 @@
-<p>breadcrum works!</p>
+<!-- Breadcrumb -->
+ <div class="breadcrumb">
+
+  
+    <a *ngIf="showHome" href="#" class="p_breadcrumb p10" [routerLink]="['card']">{{ homeLabel }}</a>
+  
+
+  <span class="p_breadcrumb "> | </span>
+
+  <span *ngIf="showHome" class="p_breadcrumb p10">
+    {{ dashboardLabel }}
+  </span>
+
+  <!-- Optional projected content -->
+  <ng-content></ng-content>
+
+</div>
+
