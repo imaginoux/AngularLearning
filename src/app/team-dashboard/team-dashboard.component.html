@@ -11,6 +11,17 @@
     [dashboardLabel]="dashboardText"
   </cb-page-heading>
 
+<!--Top-Cards_Start-->
+  <div class="top-cards">
+<cb-employee-details></cb-employee-details>
+<cb-project-status></cb-project-status>
+<cb-todays-task></cb-todays-task>
+<cb-upcoming-task></cb-upcoming-task>
+<cb-tat-breached></cb-tat-breached>
+  </div>
+
+<!--My_Bucket_Start-->
+<cb-my-bucket></cb-my-bucket>
   <div class="kanban">
   @for(item of data;track item.name){
 

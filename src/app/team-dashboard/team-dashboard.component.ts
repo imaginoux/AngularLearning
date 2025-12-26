@@ -2,11 +2,17 @@ import { Component } from '@angular/core';
 import { BreadcrumComponent } from '../breadcrum/breadcrum.component';
 import { PageHeadingComponent } from "../page-heading/page-heading.component";
 import { TaskSectionComponent } from '../task-section/task-section.component';
+import { EmployeeDetailsComponent } from "../employee-details/employee-details.component";
+import { ProjectStatusComponent } from "../project-status/project-status.component";
+import { TodaysTaskComponent } from "../todays-task/todays-task.component";
+import { UpcomingTaskComponent } from "../upcoming-task/upcoming-task.component";
+import { TATBreachedComponent } from "../tat-breached/tat-breached.component";
+import { MyBucketComponent } from "../my-bucket/my-bucket.component";
 
 @Component({
   selector: 'app-team-dashboard',
   standalone: true,
-  imports: [BreadcrumComponent, PageHeadingComponent, TaskSectionComponent],
+  imports: [BreadcrumComponent, PageHeadingComponent, TaskSectionComponent, EmployeeDetailsComponent, ProjectStatusComponent, TodaysTaskComponent, UpcomingTaskComponent, TATBreachedComponent, MyBucketComponent],
   templateUrl: './team-dashboard.component.html',
   styleUrl: './team-dashboard.component.css'
 })

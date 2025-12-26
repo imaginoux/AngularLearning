@@ -1,0 +1,36 @@
+.card {
+      background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.20);
+    height: 170px;
+    width: 195px;
+}
+
+/* Metrics */
+.metric-card {
+  text-align: center;
+  border: none;
+}
+
+.metric-card h2 {
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+.metric-card .title {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.metric-card small {
+  color: #000;
+}
+
+.sub_task_txt {font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: #707070; line-height: normal; margin: 5px 0px 5px 0px;}
+
+.blue_txt { color: #03a9f4; }
+.orange_txt { color: #f39c12; }
+.red_txt { color: #DC292E; }
+.green_txt { color: #6bbf1d; }

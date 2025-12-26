@@ -1,0 +1,33 @@
+.card {
+      background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.20);
+    height: 170px;
+    width: 195px;
+}
+
+/* Metrics */
+.metric-card {
+  text-align: center;
+  border: none;
+}
+
+.metric-card h2 {
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+.metric-card .title {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.metric-card small {
+  color: #000;
+}
+
+.green { color: #ffffff; }
+.blue { color: #ffffff; }
+.red { color: #ffffff; }
