@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f6f7fb;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+.container {
+  max-width: 1500px;
+  margin: auto;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  font-size: 14px;
+  
+}
+
+.breadcrumb a {
+  color: #00a8e8;
+  text-decoration: none;
+  
+}
+.p_breadcrum {padding: 10px;}
+/* Headings */
+h1 {
+  margin-bottom: 20px;
+}
+
+/* Top Cards */
+.top-cards {
+  display: grid;
+  grid-template-columns: 2fr repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.card {
+      background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.20);
+    height: 170px;
+    width: 195px;
+}
+
+/* Profile */
+.profile-card {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  width: 350px;
+  border: none;
+}
+
+.profile-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 18px;
+}
+
+.role {
+  font-size: 14px;
+  color: #000;
+}
+
+.email {
+  color: #00a8e8;
+  font-size: 14px;
+}
+
+.rating {
+  color: orange;
+  font-size: 25px;
+  
+}
+
+/* Metrics */
+.metric-card {
+  text-align: center;
+  border: none;
+}
+
+.metric-card h2 {
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+.metric-card .title {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.metric-card small {
+  color: #000;
+}
+
+.green { color: #ffffff; }
+.blue { color: #ffffff; }
+.red { color: #ffffff; }
+
+/* .gauge {background-image: url('/speedometer.jpg');background-repeat: no-repeat; width:174px; height: 87px;} */
+
+/* Bucket */
+.bucket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.bucket-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.bucket-actions select,
+.bucket-actions input {
+      padding: 6px 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    font-weight: bold;
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.20);
+    border: none;
+}
+
+.add-btn {
+     background: orange;
+    color: #fff;
+    border: none;
+    padding: 7px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.toggle{box-shadow: 0 0px 8px rgba(0, 0, 0, 0.20);padding: 7px 14px; border-radius: 6px; font-size: 12px; font-weight: bold;}
+
+/* Toggle */
+.switch {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  background: #ccc;
+  border-radius: 20px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  top: 2px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.switch input:checked + .slider {
+  background: #00a8e8;
+}
+
+/* Kanban */
+.kanban {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.column {
+  border-radius: 12px;
+ 
+}
+
+.blue_light { background: #a8e6ff; }
+.orange_light { background: #ffe8c4; }
+.yellow_light { background: #feffc7; }
+.green_light { background: #e8ffd3; }
+
+.column-header {
+padding: 10px 20px;
+    border-radius: 10px 10px 0px 0px;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+}
+
+.blue_txt { color: #03a9f4; }
+.orange_txt { color: #f39c12; }
+.red_txt { color: #DC292E; }
+.green_txt { color: #6bbf1d; }
+
+.blue { background: #03a9f4; }
+.orange { background: #f39c12; }
+.yellow { background: #d6c200; }
+.green { background: #6bbf1d; }
+
+/* Task Card */
+.task-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 12px;
+  margin: 12px;
+  font-size: 15px;
+  line-height: normal;
+}
+
+.task-card h4 {
+  margin: 0 0 6px;
+}
+
+.task_txt {font-size: 12px; font-family: Arial, Helvetica, sans-serif;line-height: normal; margin-bottom: 5px; }
+.sub_task_txt {font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: #707070; line-height: normal; margin: 5px 0px 5px 0px;}
+.rating_txt {font-size: 25px; font-family: Arial, Helvetica, sans-serif; color: #FF9900; line-height: normal; }
+.tag {
+  font-size: 12px;
+  color: #03a9f4;
+  font-weight: bold;
+}
+
+.active_project_txt{ font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #00a8e8; font-weight: bold; margin-bottom: 10px;}
+.total_project_txt { font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #333; font-weight: bold; margin-top: 15px;}
+.priority.high {
+  color: red;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.status.done {
+  color: green;
+  font-weight: bold;
+  font-size: 13px;
+}
