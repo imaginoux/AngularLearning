@@ -4,6 +4,7 @@ import { FormsModule, NgForm, NgModel } from '@angular/forms';
 import { User } from '../Models/User';
 import { TitleCaseSmartPipe } from '../title-case-smart.pipe';
 import { CBPopupComponent } from '../Library/popup/popup.component';
+import { CalculatorService } from '../Services/calculator.service';
 
 @Component({
   selector: 'app-template-driven-form',
@@ -14,6 +15,78 @@ import { CBPopupComponent } from '../Library/popup/popup.component';
 })
 export class TemplateDrivenFormComponent implements OnInit  {
 
+
+time="";
+  constructor(private cs: CalculatorService){
+
+    this.cs.showTime((x: any)=>{
+      this.time=x;
+    })
+
+
+//     this.cs.showTimePromise().then(
+// (x: any)=>{
+//       this.time=x;
+//     } )
+  }
+  message: any="";
+  result: any=0;
+ async calc(a: any,b: any){
+    //  this.cs.dev(a,b, (x: any)=>{
+    //   this.result=x;
+    //   this.message="";
+    //  },
+    // (err: any)=>{
+    //   this.message=err;
+    //   this.result=0;
+    // });
+    
+
+
+
+    // this.cs.devPromise(a,b).then(
+    //   (x: any)=>{
+    //   this.result=x;
+    //   this.message="";
+    //  },
+    // (err: any)=>{
+    //   this.message=err;
+    //   this.result=0;
+    // }
+
+    // )
+
+    // this.cs.devPromise(a,b).then(
+
+    //   (x: any)=>{
+    //   this.result=x;
+    //   this.message="";
+    //  }
+    // ).catch(
+    //    (err: any)=>{
+    //   this.message=err;
+    //   this.result=0;
+    // }
+    // )
+
+
+
+try{
+  this.result =await this.cs.devPromise(a,b);
+}catch(ex){
+  this.message=ex;
+}
+
+
+//2 API call
+//Promise.all
+//Promise.race
+//Promise.allSettled
+//Promise.any
+    
+    
+    
+  }
   Show(){
     this.isShowPopup=true;
   }

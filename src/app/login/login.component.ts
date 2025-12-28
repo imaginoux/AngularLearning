@@ -15,7 +15,7 @@ export class LoginComponent {
   password = '';
   errorMessage = '';
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) {}  //Router this also service , In buit service , angular provide
 
   login() {
     if (this.email === 'admin@gmail.com' && this.password === '12345') {

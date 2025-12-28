@@ -2,8 +2,25 @@
 <!-- Template-driven contact form example -->
  {{user.name | titleCaseSmart}}
  <button type="button" (click)="Show()">Show</button>
- <cb-popup *ngIf="isShowPopup" (OkEvent)="OkClick($event)"   (CancelEvent)="Close()" isOkShow=true isCancelSHow=true isHeader=false>Do you want to save Data? </cb-popup>
-<!-- <form #f="ngForm" (ngSubmit)="onSubmit(f,nameCtrl)" novalidate> -->
+ <!-- <cb-popup *ngIf="isShowPopup" (OkEvent)="OkClick($event)"   (CancelEvent)="Close()" isOkShow=true isCancelSHow=true isHeader=false>Do you want to save Data? </cb-popup> -->
+
+
+{{message}}
+ <div>
+
+  <input type="text" #a >
+  <input type="text" #b >
+
+  <button type="button" (click)="calc(a.value,b.value)">=</button>
+
+  {{result}}
+
+ </div>
+
+
+ {{time}}
+
+ <!-- <form #f="ngForm" (ngSubmit)="onSubmit(f,nameCtrl)" novalidate> -->
   <!-- Name -->
   <!-- <div class="field ">
     <label for="name" ><b>Name *</b></label>
