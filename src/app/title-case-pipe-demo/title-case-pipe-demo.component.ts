@@ -16,7 +16,7 @@ import { TitleCaseSmartPipe } from '../title-case-smart.pipe';
 })
 export class PipeCaseDemoComponent {
   // two-way bound string for user input (template example)
-  userInput = 'abhay velankar';
+  userInput = 'accordion menu';
 
   // example array of strings to show pipe behavior in *ngFor
   samples = [
