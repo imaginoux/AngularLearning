@@ -15,6 +15,7 @@ export class BreadcrumComponent {
 
    @Input() homeLabel: string = 'Home';
   @Input() dashboardLabel: string = 'Team Dashboard';
+  @Input() monthlyLabel: string ='Monthly Calendar';
   @Input() showHome: boolean = true;
 
 }

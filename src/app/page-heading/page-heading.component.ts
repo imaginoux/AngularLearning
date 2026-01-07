@@ -9,6 +9,7 @@ import { Component, Input } from '@angular/core';
 })
 export class PageHeadingComponent {
   @Input() dashboardLabel: string = 'Team Dashboard';
+  @Input() monthlycalendarLabel: string = 'Monthly Calendar';
    @Input() showPageTitle: boolean = true;
 
 }

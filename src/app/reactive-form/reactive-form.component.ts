@@ -10,6 +10,8 @@ import { ReactiveFormsModule, FormBuilder, FormGroup, Validators} from '@angular
   styleUrls: ['./reactive-form.component.css'],
 })
 export class ReactiveFormComponent implements OnInit {
+
+  
   // The FormGroup that holds all form controls
   form!: FormGroup;
 

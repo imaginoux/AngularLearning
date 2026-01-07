@@ -1,0 +1,128 @@
+
+  <!-- Header -->
+
+  
+  <cb-breadcrum
+    [homeLabel]="homeText"
+    [monthlyLabel]="monthlyText"
+    [showHome]="showHome">
+  </cb-breadcrum>
+  
+ 
+  
+ <div class="header-text row col-lg-12">
+      
+      <div class="header-text col-md-8">
+        <h4>Monthly Dashboard</h4>
+        <br>
+        <div class="description_txt"> The Monthly Calendar is a crucial page of the Check Box application.
+        It provides a <strong>consolidated monthly view</strong> displaying
+        daily tasks along with their status on a <strong>single screen</strong>.
+        Users can select a project and click View to see detailed task
+        information for the entire month.</div>
+      </div>
+      <div class=" monthly_calendar_graphics col-md-4"></div>
+    </div>
+  <!-- Main Content -->
+  <div class="content">
+
+    <!-- Calendar Section -->
+    <div class="calendar-card">
+
+      <div class="calendar-header">
+        <div>
+          <h3>January 2026</h3>
+          <span class="task-info">175 Tasks, Updated 28 sec ago</span>
+        </div>
+        <div class="calendar-actions">
+          <button class="btn today">Today</button>
+          <button class="btn add">Add New Task +</button>
+        </div>
+      </div>
+
+      <!-- Days -->
+      <div class="weekdays">
+        <div>SUN</div><div>MON</div><div>TUE</div>
+        <div>WED</div><div>THR</div><div>FRI</div><div>SAT</div>
+      </div>
+
+      <!-- Dates -->
+      <div class="dates">
+        <div class="date muted">27</div>
+        <div class="date muted">28<br><span>07 Tasks</span></div>
+        <div class="date muted">30</div>
+        <div class="date muted">31</div>
+        <div class="date">01</div>
+
+        <div class="date active">
+          02<br><span>09 Tasks</span>
+        </div>
+
+        <div class="date">
+          03<br><span>04 Tasks</span>
+        </div>
+
+        <div class="date sunday">04</div>
+        <div class="date">05<br><span>09 Tasks</span></div>
+        <div class="date">06<br><span>05 Tasks</span></div>
+        <div class="date">07</div>
+        <div class="date">08<br><span>28 Tasks</span></div>
+        <div class="date">09<br><span>08 Tasks</span></div>
+        <div class="date">10<br><span>28 Tasks</span></div>
+
+        <div class="date sunday">11</div>
+        <div class="date">12<br><span>14 Tasks</span></div>
+        <div class="date">13</div>
+        <div class="date">14<br><span>11 Tasks</span></div>
+        <div class="date">15<br><span>03 Tasks</span></div>
+        <div class="date">16</div>
+        <div class="date">17<br><span>07 Tasks</span></div>
+
+        <div class="date sunday">18</div>
+        <div class="date">19<br><span>09 Tasks</span></div>
+        <div class="date">20<br><span>02 Tasks</span></div>
+        <div class="date">21</div>
+        <div class="date">22<br><span>18 Tasks</span></div>
+        <div class="date">23<br><span>02 Tasks</span></div>
+        <div class="date">24</div>
+
+        <div class="date sunday">25</div>
+        <div class="date">26</div>
+        <div class="date">27</div>
+        <div class="date">28<br><span>04 Tasks</span></div>
+        <div class="date">29</div>
+        <div class="date">30</div>
+        <div class="date">31<br><span>06 Tasks</span></div>
+      </div>
+
+    </div>
+
+    <!-- Right Panel -->
+    <div class="details-card">
+      <h5><b>Project Name: Monthly Activity</b></h5>
+      <div class="date_txt">Date: 02 Jan 2026</div>
+
+      <div class="task-card completed">
+        <h6>Send Appointment Letter</h6>
+        <div class="sub_task_txt">As a process we need to send an appointment letter to newly joined resource.</div>
+        <div class="tag"><small>Assigned By: Amit Kawade</small></div>
+        <div class="status completed">STATUS: COMPLETED</div>
+      </div>
+
+      <div class="task-card open">
+        <h6>Verification of Newly Joined Resource</h6>
+        
+        <div class="sub_task_txt">As a process we need to verify newly joined resource.</div>
+        <div><small>Assigned By: Amit Kawade</small></div>
+        <div class="status open">STATUS: OPEN</div>
+      </div>
+
+      <div class="task-card open">
+        <h6>Perform Background Verification</h6>
+        <div class="sub_task_txt">Background verification of newly joined resource.</div>
+        <div><small>Assigned By: Amit Kawade</small></div>
+        <div class="status open">STATUS: OPEN</div>
+      </div>
+    </div>
+</div>
+  

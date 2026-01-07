@@ -14,6 +14,8 @@ import { LoginComponent } from './login/login.component';
 import { PopupFormComponent } from './popup/popup.component';
 import { TeamDashboardComponent } from './team-dashboard/team-dashboard.component';
 import { PopupTestComponent } from './popup-test/popup-test.component';
+import{MonthlyCalendarComponent} from './monthly-calendar/monthly-calendar.component'
+
 
 export const routes: Routes = [
 
@@ -33,7 +35,8 @@ export const routes: Routes = [
               {path: 'titlecasepipedemo', component: PipeCaseDemoComponent},
               {path: 'popup', component:PopupFormComponent},      
               {path: 'team-dashboard', component:TeamDashboardComponent},
-              {path: 'popup-test', component: PopupTestComponent}
+              {path: 'popup-test', component: PopupTestComponent},
+              { path: 'monthly-calendar', component: MonthlyCalendarComponent }
               
         ]
     },

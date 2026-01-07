@@ -1,0 +1,260 @@
+:host {
+  font-family: 'Montserrat', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  background: #f6f8fb;
+  color: #333;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-text h1 {
+  margin-bottom: 10px;
+}
+.header-text p {
+  color: #666;
+  max-width: 700px;
+}
+
+.monthly_calendar_graphics{background-image:url(/Monthly_Calendar-Graphics.png); background-repeat: no-repeat; width: 175px; height: 155px;}
+/*Header End*/
+
+.container {
+  padding: 24px 40px;
+}
+
+.container_heading {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.breadcrumb a {
+  color: #00a3e0;
+  text-decoration: none;
+}
+
+/* Header */
+.header h1 {
+  margin-bottom: 8px;
+}
+.description {
+  max-width: 750px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.description_txt {font-size: 14px;color: #000; line-height: normal; margin: 5px 0px 5px 0px;}
+
+/* Filters */
+.filters {
+  margin-top: 20px;
+  display: flex;
+  gap: 16px;
+   border:0px solid #fff;
+   
+  
+}
+.filters select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border:0px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.14);
+  min-width: 200px;
+  
+}
+
+/* Layout */
+.content {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+  gap: 24px;
+  margin-top: 30px;
+}
+
+/* Calendar */
+.calendar-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.20);
+
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-info {
+  font-size: 13px;
+  color: #ff8c00;
+}
+
+.calendar-actions .btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.btn.today {
+  background: #00b3e6;
+  color: #fff;
+}
+
+.btn.add {
+  background: #ff9800;
+  color: #fff;
+}
+
+/* Weekdays */
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-top: 20px;
+}
+.weekdays div {
+  text-align: center;
+  font-weight: bold;
+  color: #777;
+  padding: 8px;
+  background-color:#e2e2e2;
+    border-radius: 10px;
+  margin: 2px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Dates */
+.dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-top: 10px;
+  font-weight: bold;
+    font-size: 18px;
+    color: #707070;
+}
+
+.date {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 10px;
+  min-height: 70px;
+  font-weight: bold;
+  position: relative;
+}
+
+.date span {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: #ff8c00;
+}
+
+.date.muted {
+  color: #bbb;
+}
+
+.date.sunday {
+  color: red;
+}
+
+.date.active {
+  background: #ff9800;
+  color: #fff;
+}
+.date.active span {
+  color: #fff;
+}
+
+.date_txt{ font-size: 14px; font-weight:bold ;margin-bottom: 20px; color:#FF9900 ; }
+
+/* Right Panel */
+.details-card {
+  background: #fff4e6;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.details-card h3 {
+  margin-bottom: 6px;
+}
+
+.date-text {
+  color: #ff8c00;
+  margin-bottom: 20px;
+}
+
+/* Task Card */
+.task-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+.task-card h4 {
+  margin-bottom: 6px;
+}
+
+.task-card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.task-card small {
+  font-size: 12px;
+  color: #888;
+}
+
+.status {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.status.completed {
+  color: green;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+
+.status.open {
+  color: orange;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.task_txt {font-size: 12px; line-height: normal; margin-bottom: 5px; }
+.sub_task_txt {font-size: 12px; color: #707070; line-height: normal; margin: 5px 0px 5px 0px;}
+.rating_txt {font-size: 25px; color: #FF9900; line-height: normal; }
+.tag {
+  font-size: 12px;
+  color: #03a9f4;
+  font-weight: bold;
+}
+.description_txt {font-size: 14px;color: #707070; line-height: normal; margin: 5px 0px 5px 0px;}

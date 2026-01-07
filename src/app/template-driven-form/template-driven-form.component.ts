@@ -5,6 +5,7 @@ import { User } from '../Models/User';
 import { TitleCaseSmartPipe } from '../title-case-smart.pipe';
 import { CBPopupComponent } from '../Library/popup/popup.component';
 import { CalculatorService } from '../Services/calculator.service';
+import { MonthlyCalendarComponent } from '../monthly-calendar/monthly-calendar.component';
 
 @Component({
   selector: 'app-template-driven-form',
