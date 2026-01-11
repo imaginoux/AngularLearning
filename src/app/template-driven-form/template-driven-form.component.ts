@@ -5,7 +5,7 @@ import { User } from '../Models/User';
 import { TitleCaseSmartPipe } from '../title-case-smart.pipe';
 import { CBPopupComponent } from '../Library/popup/popup.component';
 import { CalculatorService } from '../Services/calculator.service';
-import { MonthlyCalendarComponent } from '../monthly-calendar/monthly-calendar.component';
+import { filter, map, skip, take } from 'rxjs';
 
 @Component({
   selector: 'app-template-driven-form',
@@ -18,21 +18,68 @@ export class TemplateDrivenFormComponent implements OnInit  {
 
 
 time="";
+  resultNumber: any;
   constructor(private cs: CalculatorService){
 
-    this.cs.showTime((x: any)=>{
+    // this.cs.showTime((x: any)=>{
+    //   this.time=x;
+    // })
+
+    //observable 
+
+
+      this.cs.showTimeObs().subscribe({
+
+        next: (x: any)=>{
       this.time=x;
-    })
+    } 
+      }
+)
 
 
-//     this.cs.showTimePromise().then(
-// (x: any)=>{
-//       this.time=x;
-//     } )
+
+ 
+
+    this.cs.showTimePromise().then(
+(x: any)=>{
+      this.time=x;
+    } )
   }
   message: any="";
   result: any=0;
+
+
+
+  showNumber(a: number){
+    debugger;
+    this.cs.showEvenUpTo(100).pipe(filter(x=>x%2==0), map(x=>"a" + x),skip(5), take(5)).subscribe({
+      next: (res)=>{
+    //    if(res%2==0){
+            this.resultNumber=res;
+      //  }
+          
+      }
+    })
+  }
  async calc(a: any,b: any){
+
+    this.cs.devObs(a,b).subscribe(
+{
+
+  next: (x)=>{
+           this.result=x;
+      this.message="";
+  },
+
+  error: (err)=>{
+          this.message=err;
+      this.result=0;
+  }
+
+
+})
+
+
     //  this.cs.dev(a,b, (x: any)=>{
     //   this.result=x;
     //   this.message="";
