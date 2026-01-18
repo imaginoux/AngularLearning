@@ -15,20 +15,46 @@ import { PopupFormComponent } from './popup/popup.component';
 import { TeamDashboardComponent } from './team-dashboard/team-dashboard.component';
 import { PopupTestComponent } from './popup-test/popup-test.component';
 import{MonthlyCalendarComponent} from './monthly-calendar/monthly-calendar.component'
+import { loginGuard } from './guards/login.guard';
+import { deativateGuard } from './guards/deativate.guard';
 
 
 export const routes: Routes = [
 
     { path: 'login', component: LoginComponent },
     {
-    path:'', component: ContentareaComponent,
+    path:'', component: ContentareaComponent, canActivateChild: [loginGuard],
         children: [
-            {path: 'dashboard', component: DashboardComponent},
-            {path:'card', component: CardComponent},
-            {path:'overview', component: OverviewComponent},
-             {path:'transactions', component: TransactionsComponent},
+            {path: 'dashboard',
+
+
+
+                loadComponent: () =>
+      import('./dashboard/dashboard.component').then(m => m.DashboardComponent)
+
+
+
+
+            },
+            {path:'card', 
+
+  loadComponent: () =>
+      import('./card/card.component').then(m => m.CardComponent)
+
+
+
+            },
+            {path:'overview',
+
+loadComponent: () =>
+      import('./overview/overview.component').then(m => m.OverviewComponent)
+
+
+
+
+            },
              {path: 'account', component: AccountComponent},
-             {path: 'templateform',component: TemplateDrivenFormComponent},
+             {path: 'templateform',component: TemplateDrivenFormComponent, canDeactivate: [deativateGuard]},
              {path: 'reactiveform', component: ReactiveFormComponent},
               {path: 'templatedrivenformpractice', component: TestTemplatedrivenFromComponent},
               {path: 'templatedrivenformpracticetest', component: TemplateDrivenFormTest01Component},

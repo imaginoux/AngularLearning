@@ -6,20 +6,31 @@ import { TitleCaseSmartPipe } from '../title-case-smart.pipe';
 import { CBPopupComponent } from '../Library/popup/popup.component';
 import { CalculatorService } from '../Services/calculator.service';
 import { filter, map, skip, take } from 'rxjs';
+import { UserLoginService } from '../Services/user-login.service';
+import { CanComponentDeactivate } from '../guards/deativate.guard';
+import { ValidateDirective } from '../directives/validate.directive';
+import { AutoFocusDirective } from '../directives/auto-focus.directive';
+import { HideDirective } from '../directives/hide.directive';
+import { DisabledDirective } from '../directives/disabled.directive';
 
 @Component({
   selector: 'app-template-driven-form',
   standalone:true,
-  imports: [CommonModule, FormsModule, TitleCaseSmartPipe,CBPopupComponent],
+  imports: [CommonModule, FormsModule, TitleCaseSmartPipe,CBPopupComponent, ValidateDirective
+
+
+    , AutoFocusDirective, HideDirective, DisabledDirective
+  ],
   templateUrl: './template-driven-form.component.html',
   styleUrl: './template-driven-form.component.css'
 })
-export class TemplateDrivenFormComponent implements OnInit  {
+//implements 
+export class TemplateDrivenFormComponent implements OnInit , CanComponentDeactivate  {
 
 
 time="";
   resultNumber: any;
-  constructor(private cs: CalculatorService){
+  constructor(private cs: CalculatorService, private userService : UserLoginService){
 
     // this.cs.showTime((x: any)=>{
     //   this.time=x;
@@ -45,9 +56,30 @@ time="";
       this.time=x;
     } )
   }
+  canDeactivate= () => {
+
+    if(this.counter%5 ==0){
+      return true;
+    }
+
+
+    return false;
+  };
   message: any="";
   result: any=0;
 
+
+  counter=0;
+
+  Reset(){
+    this.counter=0;
+    this.userService.setCounter(this.counter);
+  }
+  Inc(){
+    this.counter=this.counter +1;
+
+    this.userService.setCounter(this.counter);
+  }
 
 
   showNumber(a: number){

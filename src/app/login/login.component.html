@@ -7,7 +7,7 @@
       <div class="app_sub_heading">Task Assignment & Management involves assigning, tracking, and managing tasks to boost productivity and achieve goals efficiently.</div>
 
       <form (ngSubmit)="login()" #loginForm="ngForm">
-
+        <div>{{errorMessage}}</div>
         <!-- Email -->
         <div class="form-group">
           <label for="email">Email ID</label>

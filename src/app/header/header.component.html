@@ -6,7 +6,8 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-<a class="no-underline logout_btn" [routerLink]="['Dashboard']"><div class="text-uppercase small text-muted menu_option">Logout</div></a>
+    Welcome {{userName}} -({{counter}}) - {{userService.counter}}
+<a class="no-underline logout_btn"  ><div (click)="logout()" class="text-uppercase small text-muted menu_option">Logout</div></a>
 <!--
     <div style="float: right;"><button class="btn btn-danger" (click)="logout()">
   Logout

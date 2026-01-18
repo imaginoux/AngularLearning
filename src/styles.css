@@ -45,3 +45,11 @@ body{ background:var(--bg); }
 
 /* small fix for tables & lists */
 .small .nav, .small .list-group { font-size: .85rem; }
+
+.err{
+  background-color: red;
+}
+
+.hide{
+  display: none;
+}

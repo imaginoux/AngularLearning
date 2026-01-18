@@ -6,10 +6,10 @@
 
 
 {{message}}
- <div>
+ <div style="margin: 10px;">
 
-  <input type="text" #a >
-  <input type="text" #b >
+  <input type="text" #a  pattern="[A-Za-z0-9]{3,6}"  cbDisabled  role="admin" cbValidate value="a" >
+  aaaaaaaaaa <input type="text" #b cbHide role="admin"   cbAutoFocus value="aaa">
 
   <button type="button" (click)="calc(a.value,b.value)">=</button>
 
@@ -20,7 +20,7 @@
 
  </div>
 
-
+ 
  {{time}}
 
 
@@ -29,6 +29,14 @@
 Hi number is 
  {{resultNumber}}
 </div>
+
+
+
+<button type="button" (click)="Inc()">Inc</button>
+
+<button type="button" (click)="Reset()">Reset</button>
+
+{{counter}}
 
 
  <!-- <form #f="ngForm" (ngSubmit)="onSubmit(f,nameCtrl)" novalidate> -->
