@@ -16,11 +16,15 @@ import { DisabledDirective } from '../directives/disabled.directive';
 @Component({
   selector: 'app-template-driven-form',
   standalone:true,
+<<<<<<< Updated upstream
   imports: [CommonModule, FormsModule, TitleCaseSmartPipe,CBPopupComponent, ValidateDirective
 
 
     , AutoFocusDirective, HideDirective, DisabledDirective
   ],
+=======
+  imports: [CommonModule, FormsModule, TitleCaseSmartPipe],
+>>>>>>> Stashed changes
   templateUrl: './template-driven-form.component.html',
   styleUrl: './template-driven-form.component.css'
 })
