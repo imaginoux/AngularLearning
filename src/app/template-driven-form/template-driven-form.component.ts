@@ -12,21 +12,18 @@ import { ValidateDirective } from '../directives/validate.directive';
 import { AutoFocusDirective } from '../directives/auto-focus.directive';
 import { HideDirective } from '../directives/hide.directive';
 import { DisabledDirective } from '../directives/disabled.directive';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-template-driven-form',
   standalone:true,
-<<<<<<< Updated upstream
-  imports: [CommonModule, FormsModule, TitleCaseSmartPipe,CBPopupComponent, ValidateDirective
+//<<<<<<< Updated upstream//
+  imports: [CommonModule, FormsModule, TitleCaseSmartPipe,CBPopupComponent, ValidateDirective, AutoFocusDirective, HideDirective, DisabledDirective],
+//=======//
 
-
-    , AutoFocusDirective, HideDirective, DisabledDirective
-  ],
-=======
-  imports: [CommonModule, FormsModule, TitleCaseSmartPipe],
->>>>>>> Stashed changes
+//>>>>>>> Stashed changes//
   templateUrl: './template-driven-form.component.html',
-  styleUrl: './template-driven-form.component.css'
+  styleUrl: './template-driven-form.component.css',
 })
 //implements 
 export class TemplateDrivenFormComponent implements OnInit , CanComponentDeactivate  {

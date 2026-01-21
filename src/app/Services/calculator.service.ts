@@ -19,7 +19,6 @@ export class CalculatorService {
   }
 
 
-  
  showEvenUpTo(num: number){
     return new Observable((ob: Observer<any>)=>{
 
@@ -31,8 +30,6 @@ export class CalculatorService {
         
     })
   }
-
-
 
 
  showTimePromise(){
@@ -50,9 +47,6 @@ export class CalculatorService {
       succ(new Date());
     },1000);
   }
-
-
-
 
 
 
@@ -77,9 +71,7 @@ export class CalculatorService {
     }
 
     ob.next(a/b);
-    ob.complete();
-
-      
+    ob.complete();    
 
     });
 
