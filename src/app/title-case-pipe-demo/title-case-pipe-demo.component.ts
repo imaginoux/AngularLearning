@@ -2,6 +2,8 @@ import { Component, inject } from '@angular/core';
 import { CommonModule, TitleCasePipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TitleCaseSmartPipe } from '../title-case-smart.pipe';
+import { AccordionComponent } from '../Library/accordion/accordion.component';
+import { AccordionDirective } from '../Library/accordion.directive';
 
 
 @Component({
@@ -9,7 +11,10 @@ import { TitleCaseSmartPipe } from '../title-case-smart.pipe';
   standalone: true,
   // import CommonModule so template pipes (titlecase) work, FormsModule for input two-way binding,
   // and TitleCaseSmartPipe (our custom pipe) so we can use it in the template.
-  imports: [CommonModule, FormsModule, TitleCaseSmartPipe],
+  imports: [CommonModule, FormsModule, TitleCaseSmartPipe,
+
+    AccordionComponent, AccordionDirective
+  ],
   providers: [TitleCasePipe], // provide TitleCasePipe so we can inject it in the class
   templateUrl: './title-case-pipe-demo.component.html',
   styleUrls: ['./title-case-pipe-demo.component.css'],

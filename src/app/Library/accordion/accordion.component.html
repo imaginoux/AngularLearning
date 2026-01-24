@@ -1,0 +1,20 @@
+<div class="accordion"  >
+
+
+ 
+<div *ngFor="let a of accordionDirective" class="accordion-item"  >
+    <label class="accordion-header" (click)="showHide(a)">
+      {{a.header}}
+      <span class="icon">+</span>
+    </label>
+    <div class="accordion-content"   [class.show]="a.isOpen"   >
+
+        <ng-content *ngTemplateOutlet="a.temp">
+
+        </ng-content>
+      
+    </div>
+  </div>
+</div>
+
+

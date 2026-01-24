@@ -1,46 +1,38 @@
 <h4>Title Case Pipe Demo Works!</h4>
 <p>Custom Smart Case: {{ userInput | titleCaseSmart }}</p>
 
+ 
 
-<div class="accordion">
 
-  <div class="accordion-item">
-    <input type="checkbox" id="menu1">
-    <label class="accordion-header" for="menu1">
-      Dashboard
-      <span class="icon">+</span>
-    </label>
-    <div class="accordion-content">
-      <a href="#">Overview</a>
-      <a href="#">Reports</a>
-      <a href="#">Analytics</a>
-    </div>
-  </div>
 
-  <div class="accordion-item">
-    <input type="checkbox" id="menu2">
-    <label class="accordion-header" for="menu2">
-      Projects
-      <span class="icon">+</span>
-    </label>
-    <div class="accordion-content">
-      <a href="#">All Projects</a>
+
+
+<cb-accordion [isAllowMultiOpen]=true>
+
+  <ng-template cbAccordion header="Dashboard" >
+    
+     <a href="#">All Projects</a>
       <a href="#">Create Project</a>
       <a href="#">Archived</a>
-    </div>
-  </div>
+  </ng-template>
 
-  <div class="accordion-item">
-    <input type="checkbox" id="menu3">
-    <label class="accordion-header" for="menu3">
-      Settings
-      <span class="icon">+</span>
-    </label>
-    <div class="accordion-content">
-      <a href="#">Profile</a>
-      <a href="#">Security</a>
-      <a href="#">Logout</a>
-    </div>
-  </div>
+  
+  <ng-template  cbAccordion header="Projects" [isOpen]=true >
+   I am second
 
-</div>
+   <input />
+  </ng-template>
+
+    <ng-template cbAccordion  header="Secttings"  [isOpen]=true>
+   I am third
+  </ng-template>
+
+    <ng-template cbAccordion  header="Always Open" [isAlwaysOpen] =true [isOpen]=true>
+   I am Always Open
+  </ng-template>
+
+
+  
+
+
+</cb-accordion>
