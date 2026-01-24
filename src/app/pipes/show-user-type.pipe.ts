@@ -12,9 +12,6 @@ export class ShowUserTypePipe implements PipeTransform {
     }else {
       return value;
     }
-
-
-
   }
 
 }

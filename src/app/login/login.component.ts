@@ -40,13 +40,13 @@ export class LoginComponent {
       }
     })
 
-    // if (this.email === 'admin@gmail.com' && this.password === '12345') {
-    //   const userData= {
-    //     userName: "Abhay"
-    //   }
-    //   this.router.navigate(['/']);
-    // } else {
-    //   this.errorMessage = 'Invalid email or password';
-    // }
+    if (this.email === 'admin@gmail.com' && this.password === '12345') {
+      const userData= {
+        userName: "Abhay"
+      }
+      this.router.navigate(['/']);
+    } else {
+      this.errorMessage = 'Invalid email or password';
+    }
   }
 }
