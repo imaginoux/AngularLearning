@@ -5,7 +5,10 @@
 
    <div class="field">
 <label for="first_name">Name: </label>
-<input type="text" id="first_name" name="first_name" [(ngModel)]="userdata.first_name" required>
+<input type="text" id="first_name"  (input)="change()" name="first_name" [(ngModel)]="userdata.first_name" required>
+<br>
+{{userObj().first_name}} -{{firstNameLength()}}
+
 </div>
    
     <br>

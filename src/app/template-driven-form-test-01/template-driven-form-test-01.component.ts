@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, computed, effect, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -9,11 +9,29 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './template-driven-form-test-01.component.css'
 })
 export class TemplateDrivenFormTest01Component {
+
+
+  firstNameLength= computed(()=>this.userObj()?.first_name?.length);
+  constructor(){
+     effect(() => {
+      console.log('Value changed:', this.userObj());
+    });
+  }
+
+  userObj=signal({first_name:"",});
+
 userdata = {
   first_name:"",
   emailID:"",
   address:""
 }
+
+
+change(){
+  this.userObj.set({...this.userdata})
+
+}
+
 onSubmit(form:any){
   debugger;
   console.log ('submited data is '+ form.value);
