@@ -17,7 +17,7 @@ export class LoginComponent {
   password = 'Abcd123';
   errorMessage = '';
 
-  constructor(private router: Router,private userService: UserLoginService) {}  //Router this also service , In buit service , angular provide
+  constructor(private router: Router, private userService: UserLoginService) {}  //Router this also service , In buit service , angular provide
 
   login() {
 

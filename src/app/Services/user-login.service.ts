@@ -39,9 +39,7 @@ export class UserLoginService {
        }
       }
 
-
   }
-
 
   loginUser(userName: string, password: string) : Observable<any>{
 
